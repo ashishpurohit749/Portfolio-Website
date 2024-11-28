@@ -1,0 +1,81 @@
+/* Resetting default margin and padding for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Preventing horizontal scrolling */
+body {
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;  /* Ensure fallback fonts */
+}
+
+/* Global scroll behavior */
+html {
+  scroll-behavior: smooth;  /* Smooth scrolling */
+}
+
+/* Making sure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Avatar hover effect */
+.avatar-hover {
+  transition: all 0.3s ease-in-out;  /* Smooth transition */
+}
+
+.avatar-hover:hover {
+  transform: scale(1.1);  /* Slight zoom on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+}
+
+/* Prevent potential layout issues with fixed elements */
+body,
+html {
+  height: 100%;
+}
+
+/* Responsive Design: Mobile-first approach */
+@media (max-width: 768px) {
+  body {
+    padding: 0 15px;  /* Padding for mobile */
+  }
+
+  .avatar-hover {
+    transform: scale(1.05); /* Slightly smaller hover scale on mobile */
+  }
+
+  /* Adjusting the navbar for smaller screens */
+  .navbar {
+    display: block;  /* Ensure block layout on smaller screens */
+    text-align: center;
+  }
+
+  /* Mobile-specific adjustments */
+  .header {
+    font-size: 1.5rem;  /* Adjust heading size */
+  }
+}
+
+/* Additional improvements for readability and accessibility */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00BFAE;  /* Highlight on hover */
+}
+
+/* Ensure smooth page load */
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+

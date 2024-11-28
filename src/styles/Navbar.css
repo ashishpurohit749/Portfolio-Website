@@ -1,0 +1,7 @@
+/* Active Link */
+.active-link {
+    color: #00BFAE !important; /* Soft teal color for active link */
+    font-weight: 700;
+    border-bottom: 2px solid #00BFAE; /* Add underline effect */
+  }
+  
