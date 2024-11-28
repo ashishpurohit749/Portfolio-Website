@@ -65,6 +65,8 @@ const Projects = () => {
                     '&:hover': {
                       backgroundColor: '#FF5722',
                     },
+                    width: '100%', // Make button full width on small screens
+                    padding: '10px', // Increase button padding for better touch interaction
                   }}
                 >
                   View Project

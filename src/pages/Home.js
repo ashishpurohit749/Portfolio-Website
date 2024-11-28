@@ -17,10 +17,22 @@ const Home = () => {
       }}
     >
       <Container>
-        <Typography variant="h1" gutterBottom>
+        <Typography 
+          variant="h1" 
+          gutterBottom
+          sx={{
+            fontSize: { xs: '2.5rem', sm: '3rem', md: '4rem' },  // Responsive font size
+          }}
+        >
           Welcome to My Portfolio
         </Typography>
-        <Typography variant="h3" gutterBottom>
+        <Typography 
+          variant="h3" 
+          gutterBottom
+          sx={{
+            fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, // Responsive font size
+          }}
+        >
           I'm Ashish Purohit, a passionate software developer.
         </Typography>
         <Button
@@ -31,6 +43,7 @@ const Home = () => {
           sx={{
             marginTop: '20px',
             padding: '10px 20px',
+            fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },  // Responsive button size
             '&:hover': {
               backgroundColor: '#FF5722',
               boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',

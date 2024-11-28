@@ -9,20 +9,23 @@ const Footer = () => {
       sx={{
         backgroundColor: '#333',
         color: '#fff',
-        padding: '20px',
+        padding: { xs: '15px', sm: '20px' },  // Adjusts padding for smaller screens
         position: 'relative',
         bottom: 0,
         width: '100%',
         textAlign: 'center',
         boxSizing: 'border-box',
-        '@media (max-width: 600px)': {
-          padding: '15px',
-        },
       }}
     >
-      <Typography variant="body2" sx={{ marginBottom: '10px' }}>
+      {/* Copyright Text */}
+      <Typography 
+        variant="body2" 
+        sx={{ marginBottom: '10px', fontSize: { xs: '12px', sm: '14px', md: '16px' } }} // Adjust font size based on screen width
+      >
         © 2024 Ashish Purohit. All rights reserved.
       </Typography>
+
+      {/* Social Icons */}
       <Box sx={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
         <a
           href="https://github.com/yourprofile"
@@ -30,17 +33,30 @@ const Footer = () => {
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
         >
-          <IconButton sx={{ color: '#fff' }}>
+          <IconButton
+            sx={{
+              color: '#fff',
+              fontSize: { xs: '24px', sm: '28px', md: '30px' }, // Adjust icon size for responsiveness
+              '&:hover': { color: '#00BFAE' },
+            }}
+          >
             <GitHubIcon />
           </IconButton>
         </a>
+
         <a
           href="https://linkedin.com/in/yourprofile"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn Profile"
         >
-          <IconButton sx={{ color: '#fff' }}>
+          <IconButton
+            sx={{
+              color: '#fff',
+              fontSize: { xs: '24px', sm: '28px', md: '30px' }, // Adjust icon size for responsiveness
+              '&:hover': { color: '#00BFAE' },
+            }}
+          >
             <LinkedInIcon />
           </IconButton>
         </a>

@@ -32,7 +32,7 @@ const Contact = () => {
             },
           }}
         >
-          <Typography variant="h2" align="center" sx={{ marginBottom: '20px', fontWeight: 'bold', color: '#333' }}>
+          <Typography variant="h2" align="center" sx={{ marginBottom: '20px', fontWeight: 'bold', color: '#333', fontSize: { xs: '1.8rem', sm: '2.2rem' } }}>
             Get in Touch
           </Typography>
           <form onSubmit={handleSubmit}>

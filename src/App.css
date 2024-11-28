@@ -9,60 +9,43 @@
 
 /* Preventing horizontal scrolling */
 body {
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
   font-family: 'Arial', sans-serif;  /* Ensure fallback fonts */
+  line-height: 1.6; /* Improve line spacing */
+  background-color: #f4f4f4; /* Light background for readability */
 }
 
 /* Global scroll behavior */
 html {
-  scroll-behavior: smooth;  /* Smooth scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  height: 100%;
 }
 
 /* Making sure images are responsive */
 img {
   max-width: 100%;
   height: auto;
+  display: block; /* Prevent image alignment issues */
 }
 
 /* Avatar hover effect */
 .avatar-hover {
-  transition: all 0.3s ease-in-out;  /* Smooth transition */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
 .avatar-hover:hover {
-  transform: scale(1.1);  /* Slight zoom on hover */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 /* Prevent potential layout issues with fixed elements */
 body,
 html {
   height: 100%;
+  margin: 0;
 }
 
-/* Responsive Design: Mobile-first approach */
-@media (max-width: 768px) {
-  body {
-    padding: 0 15px;  /* Padding for mobile */
-  }
-
-  .avatar-hover {
-    transform: scale(1.05); /* Slightly smaller hover scale on mobile */
-  }
-
-  /* Adjusting the navbar for smaller screens */
-  .navbar {
-    display: block;  /* Ensure block layout on smaller screens */
-    text-align: center;
-  }
-
-  /* Mobile-specific adjustments */
-  .header {
-    font-size: 1.5rem;  /* Adjust heading size */
-  }
-}
-
-/* Additional improvements for readability and accessibility */
+/* Global anchor styles */
 a {
   text-decoration: none;
   color: inherit;
@@ -70,12 +53,117 @@ a {
 }
 
 a:hover {
-  color: #00BFAE;  /* Highlight on hover */
+  color: #00BFAE; /* Highlight on hover */
 }
 
-/* Ensure smooth page load */
-*::before,
-*::after {
-  box-sizing: inherit;
+/* Mobile-first approach: default styles for smaller screens */
+@media (max-width: 768px) {
+  /* General body padding for mobile */
+  body {
+    padding: 0 15px; /* Padding for mobile */
+  }
+
+  /* Avatar hover effect for mobile */
+  .avatar-hover {
+    transform: scale(1.05); /* Slightly smaller hover scale on mobile */
+  }
+
+  /* Navbar adjustments for smaller screens */
+  .navbar {
+    display: block;  /* Ensure block layout on smaller screens */
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Header text size for mobile */
+  .header {
+    font-size: 1.5rem; /* Adjust heading size */
+    padding-bottom: 10px;
+  }
+
+  /* Adjust footer for small screens */
+  footer {
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+
+  /* Social media icon size adjustments */
+  .social-icons {
+    font-size: 24px; /* Smaller icons for mobile */
+    gap: 10px; /* Reduce space between icons */
+  }
+
+  /* Adjust button sizes for mobile */
+  .button {
+    padding: 8px 15px;  /* Smaller buttons */
+    font-size: 1rem;
+  }
+
+  /* Remove unnecessary large margin for small screens */
+  .main-content {
+    margin-top: 20px;
+  }
 }
 
+/* Tablet and Up: Adjustments for larger screens (above 768px) */
+@media (min-width: 768px) {
+  /* Navbar adjustments for tablets and up */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Flex layout for desktop */
+    padding: 15px 30px;
+  }
+
+  /* Header text size for tablets */
+  .header {
+    font-size: 2rem; /* Adjust heading size for larger screens */
+  }
+
+  /* Footer adjustments for tablets and up */
+  footer {
+    padding: 25px 20px;
+    font-size: 16px;
+  }
+
+  /* Increase social media icon size */
+  .social-icons {
+    font-size: 28px; /* Larger icons for tablets and up */
+    gap: 20px;
+  }
+
+  /* Button size for larger screens */
+  .button {
+    padding: 10px 20px;  /* Larger buttons for desktops */
+    font-size: 1.2rem;
+  }
+
+  /* Content adjustments */
+  .main-content {
+    margin-top: 40px;
+  }
+}
+
+/* Large Desktop: Styling for very large screens (above 1200px) */
+@media (min-width: 1200px) {
+  /* Larger padding for large desktop screens */
+  .navbar {
+    padding: 20px 50px;
+  }
+
+  /* Increase header font size for large screens */
+  .header {
+    font-size: 2.5rem;
+  }
+
+  /* Increase footer font size for large screens */
+  footer {
+    padding: 30px 25px;
+    font-size: 18px;
+  }
+
+  /* Larger social media icon size */
+  .social-icons {
+    font-size: 32px; /* Larger icons for large screens */
+    gap: 30px;
+  }
+}

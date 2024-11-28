@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, Container, useMediaQuery, IconButton, Drawer } from '@mui/material';
 import { Link } from 'react-scroll';
 import MenuIcon from '@mui/icons-material/Menu';
-import { motion } from 'framer-motion'; // For smooth animations
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +26,6 @@ const Navbar = () => {
     setDrawerOpen(open);
   };
 
-  // Navbar Links (for DRY principles)
   const navbarLinks = [
     { name: 'Home', to: 'home' },
     { name: 'About', to: 'about' },
@@ -39,7 +38,7 @@ const Navbar = () => {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: isScrolled ? '#333' : 'transparent', // Dark gray background when scrolled
+          backgroundColor: isScrolled ? '#333' : 'transparent',
           boxShadow: isScrolled ? '0px 4px 12px rgba(0, 0, 0, 0.2)' : 'none',
           transition: 'all 0.3s ease-in-out',
           zIndex: 9999,
@@ -48,7 +47,6 @@ const Navbar = () => {
       >
         <Container>
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            {/* Brand Name */}
             <Typography
               variant="h6"
               sx={{
@@ -85,15 +83,12 @@ const Navbar = () => {
                 ))}
               </Box>
             ) : (
-              // Hamburger Menu for Mobile View
               <IconButton
                 onClick={() => toggleDrawer(true)}
                 sx={{
                   color: '#fff',
                   fontSize: '30px',
-                  '&:hover': {
-                    backgroundColor: 'transparent',
-                  },
+                  '&:hover': { backgroundColor: 'transparent' },
                 }}
               >
                 <MenuIcon />
@@ -119,9 +114,7 @@ const Navbar = () => {
                     textTransform: 'none',
                     width: '100%',
                     marginBottom: '15px',
-                    '&:hover': {
-                      color: '#00BFAE',
-                    },
+                    '&:hover': { color: '#00BFAE' },
                   }}
                 >
                   {name}

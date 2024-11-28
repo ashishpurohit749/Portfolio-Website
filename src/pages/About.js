@@ -5,19 +5,20 @@ import "../App.css";
 
 const About = () => {
     return (
-        <Container sx={{ padding: '80px 20px' }} id="about">
+        <Container sx={{ padding: { xs: '60px 20px', sm: '80px 20px' } }} id="about">
             <Typography variant="h2" align="center" gutterBottom>
                 About Me
             </Typography>
             <Grid container spacing={4} justifyContent="center" alignItems="center">
+                {/* Avatar section */}
                 <Grid item xs={12} sm={6} md={4}>
                     <Box sx={{ textAlign: 'center' }}>
                         <Avatar
                             alt="Ashish Purohit Profile Picture"
                             src={profileImage}
                             sx={{
-                                width: 200,
-                                height: 200,
+                                width: { xs: 150, sm: 200 }, // Responsive width
+                                height: { xs: 150, sm: 200 }, // Responsive height
                                 border: '5px solid #4CAF50',
                                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
                                 marginBottom: '30px',
@@ -26,6 +27,8 @@ const About = () => {
                         />
                     </Box>
                 </Grid>
+
+                {/* Text section */}
                 <Grid item xs={12} sm={6} md={6}>
                     <Typography variant="h4" paragraph>
                         Hi, I'm Ashish Purohit, a passionate software developer with expertise in React.js, Node.js, and more.
